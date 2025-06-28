@@ -8,28 +8,28 @@ import Link from "next/link";
 export function FAQSection() {
   const faqs = [
     {
-      question: "What services does Nubien offer?",
-      answer: "Nubien offers a comprehensive range of digital services including web design and development, branding, UI/UX design, digital marketing, SEO optimization, and mobile app development."
+      question: "What types of software solutions does Unizel develop?",
+      answer: "Unizel specializes in enterprise software development including collaboration platforms (Teams-like solutions), AI automation systems, data processing platforms, and custom business applications. Our flagship projects include wedding portal software, AI tax automation platforms, and synthetic data generation for LIDAR applications."
     },
     {
-      question: "How long does a typical web project take?",
-      answer: "The timeline for web projects varies depending on complexity and scope. A simple website might take 2-4 weeks, while more complex projects with custom functionality can take 2-3 months or more."
+      question: "How do you ensure software security and compliance?",
+      answer: "We implement bank-grade security measures including end-to-end encryption, multi-factor authentication, role-based access controls, and compliance with industry standards like SOC 2, GDPR, and HIPAA where applicable. Our security-first approach ensures your data and operations remain protected."
     },
     {
-      question: "Do you work with clients internationally?",
-      answer: "Yes, we work with clients around the world. Our digital-first approach allows us to collaborate effectively regardless of location, using video calls, project management tools, and regular updates."
+      question: "What technologies and platforms do you work with?",
+      answer: "We work with modern technology stacks including React, Node.js, Python, .NET, cloud platforms (AWS, Azure, GCP), databases (PostgreSQL, MongoDB), and AI/ML frameworks. We select the optimal technology stack based on your specific requirements, scalability needs, and existing infrastructure."
     },
     {
-      question: "What is your pricing structure?",
-      answer: "We offer customized pricing based on project requirements. We can work with fixed-price quotes for well-defined projects or time-and-materials billing for more flexible engagements."
+      question: "What is your development process and pricing?",
+      answer: "We follow agile development methodologies with transparent pricing models including fixed-price projects, time & materials, and dedicated team arrangements. Our pricing is tailored to project complexity, timeline, and ongoing support requirements. We provide detailed estimates during our initial consultation."
     },
     {
-      question: "Do you provide ongoing support after launch?",
-      answer: "Yes, we offer various maintenance and support packages to ensure your digital products remain secure, up-to-date, and optimized for performance over time."
+      question: "How long does it take to develop a custom software solution?",
+      answer: "Development timelines vary based on project complexity. Simple applications may take 2-3 months, while enterprise platforms like our Teams-like collaboration solutions typically require 6-12 months. We provide detailed project timelines and regular progress updates throughout development."
     },
     {
-      question: "How do you handle revisions during the design process?",
-      answer: "Our process includes dedicated revision rounds at key project milestones. We value collaborative feedback and work closely with clients to ensure the final product meets their vision and business goals."
+      question: "Do you provide ongoing support and maintenance?",
+      answer: "Yes, we offer comprehensive post-launch support including bug fixes, security updates, feature enhancements, and technical support. We provide flexible maintenance packages ranging from basic support to full managed services, ensuring your software continues to perform optimally."
     }
   ];
 
@@ -43,9 +43,13 @@ export function FAQSection() {
     <section id="faq" className="py-20 bg-muted/30">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center justify-center px-4 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4 mx-auto">
+            <span className="w-2 h-2 rounded-full bg-primary mr-2"></span>
+            FAQ
+          </div>
           <h2 className="text-3xl font-bold tracking-tighter mb-4">Frequently Asked Questions</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Find answers to common questions about our services, process, and working relationship.
+            Find answers to common questions about our software development services, process, and how we can help transform your business with custom technology solutions.
           </p>
         </div>
 
@@ -85,4 +89,4 @@ export function FAQSection() {
       </div>
     </section>
   );
-} 
+}

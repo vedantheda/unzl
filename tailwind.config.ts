@@ -52,6 +52,12 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Unizel brand colors
+        unizel: {
+          blue: "#0078FF",
+          "blue-dark": "#0056CC",
+          "blue-light": "#4DA3FF",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,8 +86,8 @@ const config = {
           '100%': { opacity: '1', transform: 'translateY(0)' }
         },
         glow: {
-          '0%, 100%': { boxShadow: '0 0 5px 2px rgba(38, 198, 177, 0.3)' },
-          '50%': { boxShadow: '0 0 15px 5px rgba(38, 198, 177, 0.5)' }
+          '0%, 100%': { boxShadow: '0 0 5px 2px rgba(59, 130, 246, 0.3)' },
+          '50%': { boxShadow: '0 0 15px 5px rgba(59, 130, 246, 0.5)' }
         },
         shine: {
           '0%': { backgroundPosition: '200% 0' },
@@ -118,7 +124,7 @@ const config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gradient-ocean': 'linear-gradient(135deg, hsl(174, 75%, 47%) 0%, hsl(190, 75%, 40%) 100%)',
+        'gradient-ocean': 'linear-gradient(135deg, hsl(210, 95%, 55%) 0%, hsl(210, 95%, 45%) 100%)',
       },
       transitionDuration: {
         '1500': '1500ms',

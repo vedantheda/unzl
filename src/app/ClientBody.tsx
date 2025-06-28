@@ -2,9 +2,17 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Droplets } from "lucide-react";
+import { Menu } from "lucide-react";
+import { Preloader } from "@/components/Preloader";
+import { ScrollProgressBar } from "@/components/ScrollProgressBar";
+import { BackToTopButton } from "@/components/BackToTopButton";
+import { PageTransition } from "@/components/PageTransition";
+import { CookieConsent } from "@/components/CookieConsent";
+
+import { Logo } from "@/components/Logo";
 
 export function ClientBody({
   children,
@@ -12,6 +20,7 @@ export function ClientBody({
   children: React.ReactNode;
 }) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,14 +34,22 @@ export function ClientBody({
   const menuItems = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
+    { label: "Solutions", href: "/services" },
     { label: "Portfolio", href: "/portfolio" },
-    { label: "Contact", href: "/contact" },
-    { label: "FAQ", href: "/#faq" },
+    { label: "Process", href: "/process" },
+    { label: "Resources", href: "/creative-references" },
+    { label: "Careers", href: "/careers" },
   ];
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      <div className="hero-glow" />
+      {/* Preloader - only on home page */}
+      {pathname === '/' && <Preloader />}
+
+      {/* Scroll Progress Indicator */}
+      <ScrollProgressBar />
+
+
 
       {/* Header */}
       <header
@@ -40,31 +57,30 @@ export function ClientBody({
           isScrolled ? "bg-background/80 backdrop-blur-md shadow-md" : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto py-4 px-4 md:px-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-8 h-8 rounded-full bg-gradient-ocean flex items-center justify-center overflow-hidden group">
-              <Droplets className="h-5 w-5 text-white animate-wave" />
-              <div className="absolute inset-0 bg-primary/20 rounded-full animate-ripple"></div>
-            </div>
-            <span className="text-xl font-bold">Nubien</span>
-          </Link>
+        <div className="container mx-auto py-2 px-4 md:px-6 flex items-center justify-between h-28">
+          <Logo size="lg" showText={false} animated={true} href="/" />
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-8">
             {menuItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors"
+                className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
-          <div className="hidden md:flex">
-            <Button asChild>
-              <Link href="/contact">Get In Touch</Link>
+          <div className="hidden md:flex items-center">
+            <Button asChild className="rounded-xl px-6 shadow-md bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
+              <Link href="/contact" className="flex items-center gap-2">
+                <span>Work With Us</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
             </Button>
           </div>
 
@@ -87,36 +103,45 @@ export function ClientBody({
                     {item.label}
                   </Link>
                 ))}
-                <Button asChild className="mt-4">
-                  <Link href="/contact">Get In Touch</Link>
-                </Button>
+                <div className="mt-4">
+                  <Button asChild className="w-full">
+                    <Link href="/contact">Work With Us</Link>
+                  </Button>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
         </div>
       </header>
 
-      <main className="pt-20">{children}</main>
+      <main className="pt-16">
+        <PageTransition>
+          {children}
+        </PageTransition>
+      </main>
+
+      {/* Back to Top Button */}
+      <BackToTopButton />
+
+      {/* Cookie Consent Banner */}
+      <CookieConsent />
 
       {/* Footer */}
       <footer className="bg-background border-t border-border/20">
         <div className="container mx-auto py-12 px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-1 md:col-span-1">
-              <Link href="/" className="flex items-center gap-2 mb-4">
-                <div className="relative w-8 h-8 rounded-full bg-gradient-ocean flex items-center justify-center overflow-hidden">
-                  <Droplets className="h-5 w-5 text-white" />
-                </div>
-                <span className="text-xl font-bold">Nubien</span>
-              </Link>
+              <div className="mb-4">
+                <Logo size="md" showText={false} animated={false} />
+              </div>
               <p className="text-sm text-muted-foreground">
-                Made remotely with ❤ and passion<br />
-                - Westhill Studio.
+                Building tomorrow's enterprise solutions<br />
+                with cutting-edge technology.
               </p>
             </div>
 
             <div>
-              <h4 className="text-lg font-bold mb-4">Template Pages</h4>
+              <h4 className="text-lg font-bold mb-4">Navigation</h4>
               <ul className="space-y-2">
                 {menuItems.map((item) => (
                   <li key={item.label}>
@@ -132,68 +157,69 @@ export function ClientBody({
             </div>
 
             <div>
-              <h4 className="text-lg font-bold mb-4">Social</h4>
+              <h4 className="text-lg font-bold mb-4">Connect</h4>
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="https://x.com/MandroDesign"
+                    href="https://linkedin.com/company/unizel"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground/80 hover:text-primary transition-colors"
                   >
-                    Twitter (X)
+                    LinkedIn
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/"
+                    href="https://github.com/unizel"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground/80 hover:text-primary transition-colors"
                   >
-                    Instagram
+                    GitHub
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://www.youtube.com/"
+                    href="https://twitter.com/unizel"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground/80 hover:text-primary transition-colors"
                   >
-                    Youtube
+                    Twitter
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://www.framer.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:hello@unizel.com"
                     className="text-foreground/80 hover:text-primary transition-colors"
                   >
-                    Framer
+                    Email
                   </a>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-lg font-bold mb-4">Subscribe Form</h4>
+              <h4 className="text-lg font-bold mb-4">Stay Updated</h4>
+              <p className="text-sm text-muted-foreground mb-4">
+                Get the latest updates on enterprise software solutions and technology trends.
+              </p>
               <div className="flex gap-2">
                 <input
                   type="email"
-                  placeholder="Enter Your Email..."
+                  placeholder="Enter your email..."
                   className="flex-1 px-3 py-2 rounded-md bg-muted border border-border focus:outline-none focus:ring-2 focus:ring-primary"
                   suppressHydrationWarning
                 />
-                <Button>Subscribe Us</Button>
+                <Button>Subscribe</Button>
               </div>
             </div>
           </div>
 
           <div className="border-t border-border/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 Mandro Design
+              © 2024 Unizel Software Agency
             </p>
             <div className="flex gap-4">
               <Link

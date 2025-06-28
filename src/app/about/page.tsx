@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FAQSection } from "@/components/FAQSection";
 import { CTASection } from "@/components/CTASection";
+import { Building2, Code, Zap, TrendingUp, Shield } from "lucide-react";
 
 export default function AboutPage() {
   const teamCircles = Array.from({ length: 9 }).map((_, i) => `team-circle-${i + 1}`);
@@ -14,22 +15,22 @@ export default function AboutPage() {
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
             <div className="badge mb-6">Explore Our Journey</div>
             <h1 className="mb-6">
-              <span className="block">Pioneering AI Innovation</span>
-              <span className="block">with Revolution!</span>
+              <span className="block">Building Enterprise Software</span>
+              <span className="block text-gradient">with Unizel!</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
-              Reboot is your trusted agency for creative strategy. We specialize in cutting-edge digital business solutions.
+              Unizel is your trusted partner for enterprise software development. We specialize in creating collaboration platforms, AI automation solutions, and cutting-edge data technologies.
             </p>
             <Button asChild size="lg">
-              <Link href="#about">View About Reboot</Link>
+              <Link href="#about">Learn About Unizel</Link>
             </Button>
           </div>
         </div>
 
         <div className="absolute inset-0 z-0 opacity-20">
           <img
-            src="https://ext.same-assets.com/3700402891/395515836.jpeg"
-            alt="Woman Using Laptop"
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+            alt="Enterprise Software Development Team"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-background/80" />
@@ -42,39 +43,35 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/2">
               <div className="mb-6">
-                <div className="badge mb-4">About Nubien</div>
-                <img
-                  src="https://ext.same-assets.com/3700402891/3061093526.svg"
-                  alt="Icon"
-                  className="w-10 h-10"
-                />
+                <div className="badge mb-4">About Unizel</div>
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Building2 className="w-6 h-6 text-primary" />
+                </div>
               </div>
               <h2 className="mb-6">
-                <span className="block">Shaping Tomorrow</span>
-                <span className="block">With Bold Ideas</span>
+                <span className="block">Transforming Business</span>
+                <span className="block">With Enterprise Software Solutions</span>
               </h2>
               <p className="text-muted-foreground mb-8">
-                Nubien is a next-gen AI agency template built for bold visionaries, researchers, and builders shaping the future of intelligence.
+                Unizel is a leading software development agency built for enterprises, organizations, and businesses seeking scalable collaboration platforms, AI automation, and innovative data technologies.
               </p>
             </div>
 
             <div className="w-full md:w-1/2 space-y-8">
               <div className="rounded-lg bg-card border border-border/50 p-6">
                 <div className="flex items-start gap-4 mb-4">
-                  <img
-                    src="https://ext.same-assets.com/3700402891/3829437231.svg"
-                    alt="Icon"
-                    className="w-10 h-10"
-                  />
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Code className="w-6 h-6 text-primary" />
+                  </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-1">Innovate</h3>
-                    <h4 className="text-lg font-medium mb-3">Built for Cutting-Edge AI Teams</h4>
+                    <h3 className="text-xl font-bold mb-1">Develop</h3>
+                    <h4 className="text-lg font-medium mb-3">Built for Modern Enterprises</h4>
                     <p className="text-muted-foreground text-sm">
-                      Whether you're developing LLMs, intelligent tools, or autonomous agents, Nubien gives you a launch-ready site that speaks the language of innovation. The layout is purpose-built to help you showcase your services, and vision clearly.
+                      Whether you're managing a large organization, enterprise team, or specialized business, Unizel provides software solutions that enhance collaboration and productivity. Our platforms are purpose-built to help you streamline operations and drive efficiency.
                     </p>
                     <div className="flex gap-3 mt-4">
-                      <div className="px-3 py-1 bg-muted rounded-full text-xs">AI Agency</div>
-                      <div className="px-3 py-1 bg-muted rounded-full text-xs">Future Ready</div>
+                      <div className="px-3 py-1 bg-muted rounded-full text-xs">Collaboration Platforms</div>
+                      <div className="px-3 py-1 bg-muted rounded-full text-xs">Enterprise-Grade</div>
                     </div>
                   </div>
                 </div>
@@ -82,20 +79,18 @@ export default function AboutPage() {
 
               <div className="rounded-lg bg-card border border-border/50 p-6">
                 <div className="flex items-start gap-4 mb-4">
-                  <img
-                    src="https://ext.same-assets.com/3700402891/3010029770.svg"
-                    alt="Icon"
-                    className="w-10 h-10"
-                  />
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-6 h-6 text-primary" />
+                  </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-1">Trust</h3>
-                    <h4 className="text-lg font-medium mb-3">Designed to Build Instant Trust</h4>
+                    <h3 className="text-xl font-bold mb-1">Optimize</h3>
+                    <h4 className="text-lg font-medium mb-3">Designed for Software Performance</h4>
                     <p className="text-muted-foreground text-sm">
-                      Nubien is crafted with clean typography, smooth transitions, and modern layouts that convey credibility at first glance. Perfect for agencies and startups needing to look established and reliable from day one.
+                      Unizel is crafted with scalability, security, and performance at its core. Our software solutions are designed to handle enterprise workloads while providing seamless experiences for teams and organizations.
                     </p>
                     <div className="flex gap-3 mt-4">
-                      <div className="px-3 py-1 bg-muted rounded-full text-xs">Trust By Design</div>
-                      <div className="px-3 py-1 bg-muted rounded-full text-xs">Modern UX</div>
+                      <div className="px-3 py-1 bg-muted rounded-full text-xs">AI-Powered</div>
+                      <div className="px-3 py-1 bg-muted rounded-full text-xs">Scalable</div>
                     </div>
                   </div>
                 </div>
@@ -111,25 +106,23 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/2 order-2 md:order-1">
               <img
-                src="https://ext.same-assets.com/3700402891/3112532987.jpeg"
-                alt="Team Working"
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1526&q=80"
+                alt="Enterprise Software Development Team Collaboration"
                 className="rounded-lg shadow-xl w-full"
               />
             </div>
 
             <div className="w-full md:w-1/2 order-1 md:order-2">
               <div className="badge mb-4">Scale</div>
-              <img
-                src="https://ext.same-assets.com/3700402891/2751859665.svg"
-                alt="Icon"
-                className="w-10 h-10 mb-4"
-              />
-              <h2 className="mb-6">Scales With Your Vision</h2>
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <TrendingUp className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="mb-6">Scales With Your Business Needs</h2>
               <p className="text-muted-foreground mb-8">
-                From product launches to team showcases and case studies, Nubien is flexible and scalable. As your agency grows, the template adapts—so your site evolves without needing a redesign.
+                From startups to enterprise organizations, Unizel solutions are flexible and scalable. As your business grows, our software adapts—so your platforms evolve with your organizational goals.
               </p>
               <Button asChild>
-                <Link href="/contact">Book an Appointment</Link>
+                <Link href="/contact">Get Started Today</Link>
               </Button>
             </div>
           </div>
@@ -142,37 +135,35 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/2">
               <div className="mb-6">
-                <div className="badge mb-4">About Nubien</div>
-                <img
-                  src="https://ext.same-assets.com/3700402891/2959825768.svg"
-                  alt="Icon"
-                  className="w-10 h-10"
-                />
+                <div className="badge mb-4">Unizel Solutions</div>
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Shield className="w-6 h-6 text-primary" />
+                </div>
               </div>
               <h2 className="mb-6">
-                <span className="block">Elevate Brands with</span>
-                <span className="block">Innovation Tech!</span>
+                <span className="block">Elevate Your Business with</span>
+                <span className="block">Enterprise Software!</span>
               </h2>
 
               <div className="space-y-6">
                 <div className="bg-card border border-border/50 rounded-lg p-6">
-                  <h4 className="text-xl font-bold mb-2">Smart Digital Solutions</h4>
+                  <h4 className="text-xl font-bold mb-2">Collaboration Platforms</h4>
                   <p className="text-muted-foreground">
-                    We combine technology and creativity to build future-ready solutions that help businesses thrive in a competitive landscape.
+                    We combine technical expertise and user experience design to build Teams-like platforms that enhance productivity and streamline communication across organizations.
                   </p>
                 </div>
 
                 <div className="bg-card border border-border/50 rounded-lg p-6">
-                  <h4 className="text-xl font-bold mb-2">Elevating Brands with Strategy</h4>
+                  <h4 className="text-xl font-bold mb-2">AI Automation Solutions</h4>
                   <p className="text-muted-foreground">
-                    Our expertise in branding, marketing, and design ensures your business stands out, leaving a lasting impact on your audience.
+                    Our expertise in artificial intelligence and automation ensures your workflows can provide optimal efficiency while reducing manual tasks and improving accuracy.
                   </p>
                 </div>
               </div>
 
               <div className="mt-8">
                 <Button asChild>
-                  <Link href="/contact">Book an Appointment</Link>
+                  <Link href="/contact">Get a Free Consultation</Link>
                 </Button>
               </div>
             </div>
@@ -180,7 +171,7 @@ export default function AboutPage() {
             <div className="w-full md:w-1/2 flex justify-center">
               <div className="bg-card border border-border/50 rounded-lg p-8 w-full max-w-md">
                 <span className="block text-sm text-muted-foreground mb-2">Trusted by</span>
-                <span className="block text-2xl font-bold mb-8">900+ People Rated</span>
+                <span className="block text-2xl font-bold mb-8">85+ Enterprise Clients</span>
 
                 <div className="grid grid-cols-3 gap-4">
                   {teamCircles.map((id) => (

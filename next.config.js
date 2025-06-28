@@ -1,13 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    unoptimized: true,
-    domains: [
-      "source.unsplash.com",
-      "images.unsplash.com",
-      "ext.same-assets.com",
-      "ugc.same-assets.com",
-    ],
     remotePatterns: [
       {
         protocol: "https",
@@ -21,21 +14,29 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "ext.same-assets.com",
+        hostname: "picsum.photos",
         pathname: "/**",
       },
       {
         protocol: "https",
-        hostname: "ugc.same-assets.com",
+        hostname: "via.placeholder.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "ext.same-assets.com",
         pathname: "/**",
       },
     ],
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
+  reactStrictMode: true,
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
   },
 };
 
