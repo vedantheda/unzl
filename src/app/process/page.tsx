@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { FAQSection } from "@/components/FAQSection";
 import { CTASection } from "@/components/CTASection";
 
 export default function ProcessPage() {
@@ -169,9 +168,6 @@ export default function ProcessPage() {
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
-      <FAQSection />
 
       {/* CTA Section */}
       <CTASection />

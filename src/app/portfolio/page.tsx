@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { FAQSection } from "@/components/FAQSection";
 import { CTASection } from "@/components/CTASection";
 import { categories, portfolioItems } from "./categories";
 import { Search, Share2, ShoppingCart, Users, Video, Filter } from "lucide-react";
@@ -120,9 +119,6 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
-      <FAQSection />
 
       {/* CTA Section */}
       <CTASection />

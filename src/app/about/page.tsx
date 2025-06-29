@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { FAQSection } from "@/components/FAQSection";
 import { CTASection } from "@/components/CTASection";
 import { Building2, Code, Zap, TrendingUp, Shield } from "lucide-react";
 
@@ -186,9 +185,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
-      <FAQSection />
 
       {/* CTA Section */}
       <CTASection />
