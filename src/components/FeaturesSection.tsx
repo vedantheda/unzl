@@ -44,23 +44,23 @@ export function FeaturesSection() {
   ];
 
   return (
-    <section id="features" className="py-24 relative">
+    <section id="features" className="py-16 sm:py-20 lg:py-24 relative">
       {/* Professional designer pattern - subtle grid */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMTIxMjEiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMC0zMHY2aDZ2LTZoLTZ6TTYgNHY2aDZ2LTZINnptMCAzMHY2aDZ2LTZINnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50"></div>
 
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16 max-w-3xl mx-auto">
           <div className="inline-flex items-center justify-center px-4 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">
             <span className="w-2 h-2 rounded-full bg-primary mr-2"></span>
             CAPABILITIES
           </div>
-          <h2 className="text-4xl font-bold tracking-tight mb-6">Enterprise Software Capabilities</h2>
-          <p className="text-xl text-muted-foreground">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-4 sm:mb-6">Enterprise Software Capabilities</h2>
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground px-4">
             We deliver comprehensive software solutions that combine cutting-edge technology with enterprise-grade security and scalability.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -68,12 +68,12 @@ export function FeaturesSection() {
             >
               {/* Card with gradient border effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-primary/30 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-300"></div>
-              <div className="relative flex flex-col h-full p-8 bg-background rounded-2xl border border-border/50 hover:border-transparent transition-all duration-300">
-                <div className="p-4 bg-gradient-to-br from-primary to-primary/80 rounded-xl w-fit mb-6 shadow-lg">
+              <div className="relative flex flex-col h-full p-6 sm:p-8 bg-background rounded-2xl border border-border/50 hover:border-transparent transition-all duration-300">
+                <div className="p-3 sm:p-4 bg-gradient-to-br from-primary to-primary/80 rounded-xl w-fit mb-4 sm:mb-6 shadow-lg">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{feature.description}</p>
                 <div className="mt-auto pt-6">
                   <div className="inline-flex items-center text-primary font-medium">
                     Learn more

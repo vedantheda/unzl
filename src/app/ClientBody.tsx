@@ -34,7 +34,6 @@ export function ClientBody({
   const menuItems = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Solutions", href: "/services" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "Process", href: "/process" },
     { label: "Resources", href: "/creative-references" },
@@ -54,27 +53,27 @@ export function ClientBody({
       {/* Header */}
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/80 backdrop-blur-md shadow-md" : "bg-transparent"
+          isScrolled ? "bg-background/90 backdrop-blur-md shadow-lg border-b border-border/20" : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto py-2 px-4 md:px-6 flex items-center justify-between h-28">
+        <div className="container mx-auto py-3 px-4 md:px-6 flex items-center justify-between h-20 md:h-28">
           <Logo size="lg" showText={false} animated={true} href="/" />
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {menuItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300"
+                className="text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300 font-medium"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center">
-            <Button asChild className="rounded-xl px-6 shadow-md bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
+          <div className="hidden lg:flex items-center">
+            <Button asChild className="rounded-xl px-6 py-2.5 shadow-md bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary hover:shadow-lg transition-all duration-300">
               <Link href="/contact" className="flex items-center gap-2">
                 <span>Work With Us</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -86,35 +85,40 @@ export function ClientBody({
 
           {/* Mobile Navigation */}
           <Sheet>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
+            <SheetTrigger asChild className="lg:hidden">
+              <Button variant="ghost" size="icon" className="h-10 w-10 rounded-xl hover:bg-primary/10">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent className="bg-background/95 backdrop-blur-lg">
-              <nav className="flex flex-col gap-4 mt-8">
-                {menuItems.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className="text-foreground/80 hover:text-primary transition-colors text-lg py-2"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-                <div className="mt-4">
-                  <Button asChild className="w-full">
-                    <Link href="/contact">Work With Us</Link>
-                  </Button>
+            <SheetContent className="bg-background/95 backdrop-blur-lg border-l border-border/20 w-80 sm:w-96">
+              <div className="flex flex-col h-full">
+                <div className="flex items-center justify-between py-4 border-b border-border/20">
+                  <Logo size="md" showText={false} animated={false} />
                 </div>
-              </nav>
+                <nav className="flex flex-col gap-2 mt-8 flex-1">
+                  {menuItems.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-200 text-lg py-4 px-4 rounded-xl font-medium border border-transparent hover:border-primary/10"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  <div className="mt-8 px-4">
+                    <Button asChild className="w-full py-3 rounded-xl bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
+                      <Link href="/contact">Work With Us</Link>
+                    </Button>
+                  </div>
+                </nav>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
       </header>
 
-      <main className="pt-16">
+      <main className="pt-20 md:pt-16">
         <PageTransition>
           {children}
         </PageTransition>
@@ -128,9 +132,9 @@ export function ClientBody({
 
       {/* Footer */}
       <footer className="bg-background border-t border-border/20">
-        <div className="container mx-auto py-12 px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div className="col-span-1 md:col-span-1">
+        <div className="container mx-auto py-8 sm:py-12 px-4 md:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+            <div className="col-span-1 sm:col-span-2 lg:col-span-1">
               <div className="mb-4">
                 <Logo size="md" showText={false} animated={false} />
               </div>
@@ -205,14 +209,14 @@ export function ClientBody({
               <p className="text-sm text-muted-foreground mb-4">
                 Get the latest updates on enterprise software solutions and technology trends.
               </p>
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input
                   type="email"
                   placeholder="Enter your email..."
-                  className="flex-1 px-3 py-2 rounded-md bg-muted border border-border focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="flex-1 px-3 py-2 rounded-md bg-muted border border-border focus:outline-none focus:ring-2 focus:ring-primary min-h-[44px]"
                   suppressHydrationWarning
                 />
-                <Button>Subscribe</Button>
+                <Button className="w-full sm:w-auto min-h-[44px]">Subscribe</Button>
               </div>
             </div>
           </div>

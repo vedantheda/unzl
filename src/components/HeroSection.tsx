@@ -9,7 +9,7 @@ import { ArrowRight, Play, Code, Database, Shield } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
+    <section className="relative py-16 sm:py-20 md:py-32 overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
 
       {/* Floating geometric shapes with animations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -63,9 +63,9 @@ export function HeroSection() {
       </div>
 
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-4 sm:gap-6 text-center lg:text-left"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -85,7 +85,7 @@ export function HeroSection() {
             </motion.div>
 
             <motion.h1
-              className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -112,7 +112,7 @@ export function HeroSection() {
             </motion.h1>
 
             <motion.p
-              className="text-xl text-muted-foreground max-w-lg leading-relaxed"
+              className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-lg leading-relaxed mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -121,19 +121,19 @@ export function HeroSection() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 mt-6"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <Button size="lg" className="designer-button px-8 py-6 group" asChild>
-                <Link href="/portfolio" className="flex items-center gap-2">
+              <Button size="lg" className="designer-button px-6 sm:px-8 py-3 sm:py-4 lg:py-6 group w-full sm:w-auto" asChild>
+                <Link href="/portfolio" className="flex items-center justify-center gap-2">
                   <span>View Our Solutions</span>
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="rounded-xl border-2 border-primary/20 hover:border-primary/50 backdrop-blur-sm px-8 py-6 group" asChild>
-                <Link href="/contact" className="flex items-center gap-2">
+              <Button size="lg" variant="outline" className="rounded-xl border-2 border-primary/20 hover:border-primary/50 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 lg:py-6 group w-full sm:w-auto" asChild>
+                <Link href="/contact" className="flex items-center justify-center gap-2">
                   <span>Start Your Project</span>
                   <Play className="h-4 w-4 transition-transform group-hover:scale-110" />
                 </Link>

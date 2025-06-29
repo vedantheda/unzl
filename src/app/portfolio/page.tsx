@@ -31,18 +31,18 @@ export default function PortfolioPage() {
   return (
     <main>
       {/* Hero section */}
-      <section className="py-24 relative">
+      <section className="py-16 sm:py-20 lg:py-24 relative">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="badge mb-6">PORTFOLIO/PROJECTS</div>
-            <h1 className="mb-6">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <div className="badge mb-4 sm:mb-6">PORTFOLIO/PROJECTS</div>
+            <h1 className="mb-4 sm:mb-6">
               <span className="block">Our Software Solutions</span>
               <span className="block text-gradient">That Transform Business</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
               Explore our portfolio of enterprise software solutions that have helped organizations enhance collaboration, automate processes, and leverage cutting-edge technology.
             </p>
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="w-full sm:w-auto">
               <Link href="/contact">Start Your Project</Link>
             </Button>
           </div>
@@ -74,7 +74,7 @@ export default function PortfolioPage() {
           </div>
 
           {/* Portfolio grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
             {filteredItems.map((item) => (
               <Link key={item.id} href={`/portfolio/${item.id}`} className="group">
                 <div className="bg-card rounded-xl overflow-hidden border border-border/50 h-full flex flex-col">

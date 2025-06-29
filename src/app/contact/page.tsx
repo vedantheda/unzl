@@ -8,15 +8,15 @@ export default function ContactPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="py-20 md:py-28 relative overflow-hidden">
+      <section className="py-16 sm:py-20 md:py-28 relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-            <div className="badge mb-6">Get In Touch</div>
-            <h1 className="mb-6">
+            <div className="badge mb-4 sm:mb-6">Get In Touch</div>
+            <h1 className="mb-4 sm:mb-6">
               <span className="block">Ready to Transform Your</span>
               <span className="block text-gradient">Business with Software?</span>
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl px-4">
               Let's discuss how Unizel can help your organization with enterprise software solutions, collaboration platforms, and AI automation.<br />
               Fill out the form below and we'll get back to you within 24 hours.
             </p>
@@ -28,11 +28,11 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="py-12 md:py-16 relative">
+      <section id="contact-form" className="py-8 sm:py-12 md:py-16 relative">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="bg-card border border-border/50 rounded-xl p-8 md:p-12 max-w-4xl mx-auto">
-            <form className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-card border border-border/50 rounded-xl p-6 sm:p-8 md:p-12 max-w-4xl mx-auto">
+            <form className="space-y-6 sm:space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label htmlFor="first-name" className="block text-sm font-medium mb-2">
                     First name*
@@ -142,7 +142,7 @@ export default function ContactPage() {
                 />
               </div>
 
-              <Button type="submit" className="w-full" size="lg">
+              <Button type="submit" className="w-full py-3 sm:py-4" size="lg">
                 Send Your Message
               </Button>
             </form>

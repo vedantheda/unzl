@@ -52,9 +52,9 @@ export function PortfolioSection() {
   ];
 
   return (
-    <section id="portfolio" className="py-20">
+    <section id="portfolio" className="py-16 sm:py-20 lg:py-24">
       <div className="container px-4 md:px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <motion.div
             className="inline-flex items-center justify-center px-4 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4 mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ export function PortfolioSection() {
             PORTFOLIO/PROJECTS
           </motion.div>
           <motion.h2
-            className="text-3xl font-bold tracking-tighter mb-4"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tighter mb-4"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -79,7 +79,7 @@ export function PortfolioSection() {
             Our Software Solutions
           </motion.h2>
           <motion.p
-            className="text-xl text-muted-foreground max-w-2xl mx-auto"
+            className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -89,7 +89,7 @@ export function PortfolioSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {portfolioItems.map((item, index) => (
             <motion.div
               key={index}
@@ -103,7 +103,7 @@ export function PortfolioSection() {
                 transition: { duration: 0.2 }
               }}
             >
-              <div className={`${item.image} w-full h-64 transition-transform duration-500 ease-in-out group-hover:scale-110 relative overflow-hidden`}>
+              <div className={`${item.image} w-full h-48 sm:h-56 lg:h-64 transition-transform duration-500 ease-in-out group-hover:scale-110 relative overflow-hidden`}>
                 {/* Background image */}
                 {item.backgroundImage && (
                   <div

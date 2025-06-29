@@ -7,12 +7,12 @@ import { Users, Code, Database, Shield, ArrowRight, CheckCircle } from "lucide-r
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-28 relative">
+    <section id="about" className="py-16 sm:py-20 lg:py-28 relative">
       {/* Professional designer pattern - subtle background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/30 to-background"></div>
 
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: -30 }}
@@ -119,7 +119,7 @@ export function AboutSection() {
                 WHAT MAKES UNIZEL EXCEPTIONAL
               </motion.div>
               <motion.h2
-                className="text-4xl font-bold tracking-tight mb-4 leading-tight"
+                className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-4 leading-tight text-center lg:text-left"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
