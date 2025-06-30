@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+
 import { Preloader } from "@/components/Preloader";
 import { ScrollProgressBar } from "@/components/ScrollProgressBar";
 import { BackToTopButton } from "@/components/BackToTopButton";
@@ -59,11 +58,11 @@ export function ClientBody({
             isScrolled ? "bg-background/90 backdrop-blur-md shadow-lg border-b border-border/20" : "bg-transparent"
           }`}
         >
-        <div className="container mx-auto py-3 px-4 md:px-6 flex items-center justify-between h-20 md:h-28">
+        <div className="container mx-auto py-3 px-4 md:px-6 flex items-center justify-between h-28">
           <Logo size="lg" showText={false} animated={true} href="/" />
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          {/* Navigation */}
+          <nav className="flex items-center gap-8">
             {menuItems.map((item) => (
               <Link
                 key={item.label}
@@ -75,7 +74,7 @@ export function ClientBody({
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center">
+          <div className="flex items-center">
             <Button asChild className="rounded-xl px-6 py-2.5 shadow-md bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary hover:shadow-lg transition-all duration-300">
               <Link href="/contact" className="flex items-center gap-2">
                 <span>Work With Us</span>
@@ -86,43 +85,12 @@ export function ClientBody({
             </Button>
           </div>
 
-          {/* Mobile Navigation */}
-          <Sheet>
-            <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon" className="h-10 w-10 rounded-xl hover:bg-primary/10">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent className="bg-background/95 backdrop-blur-lg border-l border-border/20 w-80 sm:w-96">
-              <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between py-4 border-b border-border/20">
-                  <Logo size="md" showText={false} animated={false} />
-                </div>
-                <nav className="flex flex-col gap-2 mt-8 flex-1">
-                  {menuItems.map((item) => (
-                    <Link
-                      key={item.label}
-                      href={item.href}
-                      className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-200 text-lg py-4 px-4 rounded-xl font-medium border border-transparent hover:border-primary/10"
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                  <div className="mt-8 px-4">
-                    <Button asChild className="w-full py-3 rounded-xl bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
-                      <Link href="/contact">Work With Us</Link>
-                    </Button>
-                  </div>
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
+
         </div>
         </header>
       )}
 
-      <main className="pt-20 md:pt-16">
+      <main className="pt-28">
         <PageTransition>
           {children}
         </PageTransition>

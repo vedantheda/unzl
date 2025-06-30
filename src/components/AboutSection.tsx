@@ -7,12 +7,12 @@ import { Users, Code, Database, Shield, ArrowRight, CheckCircle } from "lucide-r
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-16 sm:py-20 lg:py-28 relative">
+    <section id="about" className="py-20 lg:py-28 relative">
       {/* Professional designer pattern - subtle background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/30 to-background"></div>
 
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             className="relative"
             initial={{ opacity: 0, x: -30 }}

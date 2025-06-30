@@ -26,9 +26,9 @@ export function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-16 sm:py-20 lg:py-24 bg-muted/30">
+    <section id="services" className="py-20 lg:py-24 bg-muted/30">
       <div className="container px-4 md:px-6">
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-16">
           <motion.div
             className="inline-flex items-center justify-center px-4 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4 mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export function ServicesSection() {
             OUR SOLUTIONS
           </motion.div>
           <motion.h2
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tighter mb-4"
+            className="text-3xl lg:text-4xl font-bold tracking-tighter mb-4"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -53,7 +53,7 @@ export function ServicesSection() {
             Enterprise Software Projects
           </motion.h2>
           <motion.p
-            className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4"
+            className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -63,7 +63,7 @@ export function ServicesSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -73,7 +73,7 @@ export function ServicesSection() {
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
-              <Card className="p-6 sm:p-8 h-full group hover:border-primary/20 transition-all duration-300 relative overflow-hidden">
+              <Card className="p-8 h-full group hover:border-primary/20 transition-all duration-300 relative overflow-hidden">
                 {/* Background gradient on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
