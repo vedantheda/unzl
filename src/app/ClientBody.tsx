@@ -13,6 +13,7 @@ import { PageTransition } from "@/components/PageTransition";
 import { CookieConsent } from "@/components/CookieConsent";
 
 import { Logo } from "@/components/Logo";
+import { usePreloader } from "@/contexts/PreloaderContext";
 
 export function ClientBody({
   children,
@@ -21,6 +22,7 @@ export function ClientBody({
 }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+  const { isPreloaderActive } = usePreloader();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,11 +53,12 @@ export function ClientBody({
 
 
       {/* Header */}
-      <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/90 backdrop-blur-md shadow-lg border-b border-border/20" : "bg-transparent"
-        }`}
-      >
+      {!isPreloaderActive && (
+        <header
+          className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+            isScrolled ? "bg-background/90 backdrop-blur-md shadow-lg border-b border-border/20" : "bg-transparent"
+          }`}
+        >
         <div className="container mx-auto py-3 px-4 md:px-6 flex items-center justify-between h-20 md:h-28">
           <Logo size="lg" showText={false} animated={true} href="/" />
 
@@ -116,7 +119,8 @@ export function ClientBody({
             </SheetContent>
           </Sheet>
         </div>
-      </header>
+        </header>
+      )}
 
       <main className="pt-20 md:pt-16">
         <PageTransition>

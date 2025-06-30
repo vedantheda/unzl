@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { ClientBody } from "./ClientBody";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { PreloaderProvider } from "@/contexts/PreloaderContext";
 
 export const metadata: Metadata = {
   title: {
@@ -55,9 +56,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <ClientBody>{children}</ClientBody>
-        </ThemeProvider>
+        <PreloaderProvider>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            <ClientBody>{children}</ClientBody>
+          </ThemeProvider>
+        </PreloaderProvider>
       </body>
     </html>
   );

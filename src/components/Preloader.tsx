@@ -3,11 +3,13 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Logo } from "@/components/Logo";
+import { usePreloader } from "@/contexts/PreloaderContext";
 
 export function Preloader() {
   const [loading, setLoading] = useState(true);
   const [hasSeenPreloader, setHasSeenPreloader] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { setIsPreloaderActive } = usePreloader();
 
   // Handle hydration safely
   useEffect(() => {
@@ -16,8 +18,11 @@ export function Preloader() {
     if (seen) {
       setHasSeenPreloader(true);
       setLoading(false);
+      setIsPreloaderActive(false);
+    } else {
+      setIsPreloaderActive(true);
     }
-  }, []);
+  }, [setIsPreloaderActive]);
 
   // Mark as seen when preloader starts
   useEffect(() => {
@@ -31,12 +36,15 @@ export function Preloader() {
     if (!loading || !mounted || hasSeenPreloader) return;
 
     // Simple 2.5 second preloader
-    const timer = setTimeout(() => setLoading(false), 2500);
+    const timer = setTimeout(() => {
+      setLoading(false);
+      setIsPreloaderActive(false);
+    }, 2500);
 
     return () => {
       clearTimeout(timer);
     };
-  }, [loading, mounted, hasSeenPreloader]);
+  }, [loading, mounted, hasSeenPreloader, setIsPreloaderActive]);
 
 
 
