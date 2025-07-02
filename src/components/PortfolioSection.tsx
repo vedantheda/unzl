@@ -12,14 +12,14 @@ export function PortfolioSection() {
       category: "Wedding Portal Software",
       image: "bg-gradient-to-br from-purple-500 to-pink-600",
       description: "Teams-like collaboration platform for wedding planning",
-      backgroundImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+      backgroundImage: "/images/weddingconnectpro.png"
     },
     {
       title: "TaxFlow AI",
       category: "AI Tax Automation",
       image: "bg-gradient-to-br from-blue-500 to-indigo-600",
       description: "Intelligent tax processing with team collaboration",
-      backgroundImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+      backgroundImage: "/images/taxflowai.png"
     },
     {
       title: "LidarSynth Engine",

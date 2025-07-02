@@ -29,7 +29,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "commondatastorage.googleapis.com",
+        hostname: "ext.same-assets.com",
         pathname: "/**",
       },
     ],

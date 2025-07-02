@@ -79,11 +79,11 @@ export const portfolioItems: PortfolioItem[] = [
     ],
     images: [
       {
-        src: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80',
+        src: '/images/weddingconnectpro.png',
         alt: 'Wedding Portal Dashboard - Team Collaboration Interface'
       },
       {
-        src: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1526&q=80',
+        src: '/images/weddingconnectpro.png',
         alt: 'Wedding Planning Collaboration Platform'
       }
     ],
@@ -106,15 +106,15 @@ export const portfolioItems: PortfolioItem[] = [
     ],
     images: [
       {
-        src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80',
+        src: '/images/taxflowai.png',
         alt: 'AI Tax Automation Dashboard with Analytics'
       },
       {
-        src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1515&q=80',
+        src: '/images/taxflowai.png',
         alt: 'AI Processing and Document Analysis Interface'
       }
     ],
-    videoUrl: 'https://www.youtube.com/embed/M7lc1UVf-VE'
+    videoUrl: 'https://www.youtube.com/embed/nN9xsFUsPqM'
   },
   {
     id: 'lidar-synthetic-data',

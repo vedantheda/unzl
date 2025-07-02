@@ -18,8 +18,8 @@ export default function VideoPage() {
       title: "WeddingConnect Pro Demo",
       client: "Wedding Industry Solutions",
       description: "A comprehensive demonstration of our Teams-like collaboration platform designed specifically for wedding planning, showcasing real-time communication and vendor management features.",
-      thumbnail: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80",
-      videoUrl: "https://www.youtube.com/embed/ScMzIvxBSi4",
+      thumbnail: "/images/weddingconnectpro.png",
+      videoUrl: "https://www.youtube.com/embed/QH2-TGUlwu4",
       stats: {
         users: "150+",
         efficiency: "85%",
@@ -31,8 +31,8 @@ export default function VideoPage() {
       title: "TaxFlow AI Platform Demo",
       client: "Enterprise Tax Solutions",
       description: "Demonstration of our intelligent tax processing platform that combines AI automation with team collaboration features for streamlined tax preparation workflows.",
-      thumbnail: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      videoUrl: "https://www.youtube.com/embed/M7lc1UVf-VE",
+      thumbnail: "/images/taxflowai.png",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       stats: {
         firms: "60+",
         accuracy: "99.8%",
@@ -45,7 +45,7 @@ export default function VideoPage() {
       client: "Autonomous Vehicle Research",
       description: "Overview of our advanced synthetic data generation platform that creates high-quality LIDAR datasets for machine learning training and autonomous vehicle development.",
       thumbnail: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      videoUrl: "https://www.youtube.com/embed/yKNxeF4KMsY",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       stats: {
         companies: "25+",
         accuracy: "95%",
@@ -61,7 +61,7 @@ export default function VideoPage() {
     client: "Unizel Client",
     description: "Enterprise-grade software solution that enhances collaboration, automates processes, and delivers measurable business value.",
     thumbnail: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    videoUrl: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     stats: {
       users: "1000+",
       uptime: "99.9%",

@@ -146,8 +146,8 @@ export function PlatformDemo() {
     <VideoDemo
       title="Enterprise Collaboration Platform"
       description="See how our Teams-like platforms enhance productivity"
-      videoUrl="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-      thumbnailUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+      videoUrl="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4"
+      thumbnailUrl="/images/weddingconnectpro.png"
       className="max-w-md"
     />
   );
@@ -158,7 +158,7 @@ export function AIDemo() {
     <VideoDemo
       title="AI Automation Solutions"
       description="Watch our AI systems streamline complex business processes"
-      videoUrl="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      videoUrl="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_25fps.mp4"
       thumbnailUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
       className="max-w-md"
     />
@@ -170,7 +170,7 @@ export function DataDemo() {
     <VideoDemo
       title="Advanced Data Technologies"
       description="Explore our synthetic data generation and analytics platforms"
-      videoUrl="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+      videoUrl="https://videos.pexels.com/video-files/3191836/3191836-uhd_2560_1440_25fps.mp4"
       thumbnailUrl="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
       className="max-w-md"
     />

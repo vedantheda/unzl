@@ -18,7 +18,7 @@ export default function CreativeReferencesPage() {
           title: "Slack - Team Communication",
           description: "Slack's approach to team communication shows how to create intuitive interfaces that make complex workflows feel simple and engaging for users.",
           url: "https://slack.com/",
-          imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+          imageUrl: "/images/weddingconnectpro.png"
         },
         {
           title: "Notion - Collaborative Workspace",
