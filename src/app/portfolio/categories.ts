@@ -114,7 +114,7 @@ export const portfolioItems: PortfolioItem[] = [
         alt: 'AI Processing and Document Analysis Interface'
       }
     ],
-    videoUrl: 'https://www.youtube.com/embed/nN9xsFUsPqM'
+    videoUrl: 'https://www.youtube.com/embed/M7lc1UVf-VE'
   },
   {
     id: 'lidar-synthetic-data',
